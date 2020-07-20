@@ -1,4 +1,4 @@
-let imgs = ["img/1.webp", "img/2.webp", "img/3.webp"];
+let imgs = ["./img/1.webp", "./img/2.webp", "./img/3.webp"];
 
 let img = document.querySelector("img"); //находим div с картинкой
 
