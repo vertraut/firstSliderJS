@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(255, 238, 161);
+}
+
+.slider {
+  display: flex;
+  background-color: #ffffff;
+  width: 800px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.back,
+.forward {
+  background-color: rgb(209, 209, 209);
+  flex-grow: 1;
+  transition: background-color 250ms linear;
+  &:hover {
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+  }
+}
+
+.img {
+  background-color: rgb(255, 255, 255);
+  flex-grow: 10;
+  max-width: 600px;
+
+  user-select: none;
+}

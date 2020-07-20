@@ -1,0 +1,43 @@
+body {
+  background-color: #ffeea1;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  width: 800px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.back,
+.forward {
+  background-color: #d1d1d1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+}
+
+.back:hover,
+.forward:hover {
+  background-color: #646464;
+  cursor: pointer;
+}
+
+.img {
+  background-color: white;
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  max-width: 600px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
