@@ -55,6 +55,10 @@ body {
   background-image: url(../img/3.webp);
 }
 
+.slider-item.item-4 {
+  background-image: url(../img/4.jpeg);
+}
+
 .slider-buttons {
   text-align: center;
   margin-top: 30px;
