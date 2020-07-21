@@ -1,8 +1,11 @@
 body {
   background-color: rgb(255, 238, 161);
+  margin: 0;
+  margin-top: 50px;
+  box-sizing: border-box;
 }
 
-.slider {
+.wrapper {
   display: flex;
   background-color: #ffffff;
   width: 800px;
@@ -11,21 +14,43 @@ body {
   margin-left: auto;
 }
 
-.back,
-.forward {
-  background-color: rgb(209, 209, 209);
-  flex-grow: 1;
-  transition: background-color 250ms linear;
-  &:hover {
-    background-color: rgb(100, 100, 100);
-    cursor: pointer;
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  background-color: rgb(207, 255, 103);
+
+  user-select: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  //   transform: translateX(-800px);
+  transition: 0.2s;
+}
+
+.slider-item {
+  //   border: 1px solid red;
+  min-width: 800px;
+  height: 400px;
+  background-size: cover;
+  &.item-1 {
+    background-image: url(../img/1.webp);
+  }
+  &.item-2 {
+    background-image: url(../img/2.webp);
+  }
+  &.item-3 {
+    background-image: url(../img/3.webp);
   }
 }
 
-.img {
-  background-color: rgb(255, 255, 255);
-  flex-grow: 10;
-  max-width: 600px;
+.slider-buttons {
+  text-align: center;
+  margin-top: 30px;
 
-  user-select: none;
+  & button:first-child {
+    margin-right: 30px;
+  }
 }

@@ -1,31 +1,28 @@
-let imgs = ["./img/1.webp", "./img/2.webp", "./img/3.webp"];
+const btnForward = document.querySelector(".forward-button");
+const btnBack = document.querySelector(".back-button");
+const sliderTrack = document.querySelector(".slider-track");
 
-let img = document.querySelector("img"); //находим div с картинкой
+const itemsCount = document.querySelectorAll(".slider-item").length;
 
-let btnBack = document.querySelector("div.back");
+let positionX = 0;
+const stepX = 800;
+const maxPositionX = -(itemsCount * stepX - stepX);
 
-let btnForward = document.querySelector("div.forward");
-// img.src = "img/3.webp";
+let sliderPositionX = function () {
+  btnForward.disabled = positionX <= maxPositionX;
+  btnBack.disabled = positionX >= 0;
 
-let imgNum = 1;
-let imgMaxCount = 3;
-
-btnBack.onclick = function () {
-  --imgNum;
-
-  if (imgNum <= 0) {
-    imgNum = imgMaxCount;
-  }
-  console.log(imgNum);
-  img.src = imgs[imgNum - 1];
+  sliderTrack.style.transform = ` translateX(${positionX}px)`;
 };
 
-btnForward.onclick = function () {
-  ++imgNum;
+sliderPositionX();
 
-  if (imgNum > imgMaxCount) {
-    imgNum = 1;
-  }
-  console.log(imgNum);
-  img.src = imgs[imgNum - 1];
+btnForward.onclick = function () {
+  positionX -= stepX;
+  sliderPositionX(positionX);
+};
+
+btnBack.onclick = function () {
+  positionX += stepX;
+  sliderPositionX();
 };
